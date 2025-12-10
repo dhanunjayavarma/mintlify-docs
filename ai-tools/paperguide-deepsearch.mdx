@@ -1,0 +1,170 @@
+---
+title: "Paperguide DeepSearch setup"
+description: "Configure Paperguide DeepSearch for your documentation workflow"
+icon: "magnifying-glass"
+---
+
+Use Paperguide DeepSearch to research and enhance your documentation with accurate, cited information. This guide shows how to leverage DeepSearch for technical writing and documentation research.
+
+## Prerequisites
+
+- Paperguide account with DeepSearch access
+- Access to your documentation repository
+
+## Using DeepSearch for documentation
+
+DeepSearch helps you find accurate, peer-reviewed information to support your technical documentation with credible sources.
+
+### Research workflow
+
+<Steps>
+<Step title="Identify documentation gaps">
+  Review your documentation to identify areas that need:
+  - Technical accuracy verification
+  - Supporting research and citations
+  - Industry best practices
+  - Current standards and specifications
+</Step>
+
+<Step title="Query DeepSearch">
+  Use specific, technical queries to find relevant information:
+  
+  ```
+  "API rate limiting best practices for REST APIs"
+  "OAuth 2.0 security implementation standards"
+  "WebSocket connection handling patterns"
+  ```
+  
+  <Tip>
+  Frame queries as specific technical questions rather than broad topics for better results.
+  </Tip>
+</Step>
+
+<Step title="Evaluate sources">
+  Review DeepSearch results for:
+  - Source credibility and recency
+  - Technical accuracy and depth
+  - Relevance to your documentation context
+  - Consistency with existing standards
+  
+  <Check>
+  Prioritize official specifications, peer-reviewed papers, and authoritative technical sources.
+  </Check>
+</Step>
+
+<Step title="Integrate findings">
+  Add researched information to your documentation:
+  - Cite sources appropriately
+  - Adapt technical language for your audience
+  - Include practical examples
+  - Link to original sources when helpful
+</Step>
+</Steps>
+
+## Best practices
+
+### Query formulation
+
+Write queries that target specific technical information:
+
+<Tabs>
+<Tab title="Good queries">
+  - "JWT token expiration best practices"
+  - "GraphQL query optimization techniques"
+  - "Database connection pooling implementation"
+</Tab>
+
+<Tab title="Avoid">
+  - "How do APIs work?"
+  - "Tell me about databases"
+  - "What is authentication?"
+</Tab>
+</Tabs>
+
+### Source verification
+
+<AccordionGroup>
+<Accordion title="Evaluating technical sources">
+  - **Official documentation**: Prioritize vendor and standards body docs
+  - **Peer-reviewed papers**: Verify publication date and citations
+  - **Technical blogs**: Check author credentials and company reputation
+  - **Stack Overflow**: Use for common patterns, verify with official sources
+</Accordion>
+
+<Accordion title="Citing sources in documentation">
+  ```markdown
+  According to the OAuth 2.0 specification (RFC 6749), authorization 
+  codes should expire within 10 minutes of issuance.
+  
+  [Learn more about OAuth 2.0](https://tools.ietf.org/html/rfc6749)
+  ```
+  
+  <Note>
+  Link to authoritative sources rather than copying large sections of text.
+  </Note>
+</Accordion>
+</AccordionGroup>
+
+### Documentation enhancement
+
+Use DeepSearch to improve documentation quality:
+
+<CardGroup cols={2}>
+<Card title="Technical accuracy" icon="check">
+  Verify technical claims and specifications against authoritative sources.
+</Card>
+
+<Card title="Best practices" icon="star">
+  Research industry-standard approaches and recommended patterns.
+</Card>
+
+<Card title="Security guidance" icon="shield">
+  Find current security recommendations and vulnerability information.
+</Card>
+
+<Card title="Performance tips" icon="gauge">
+  Discover optimization techniques and benchmarking data.
+</Card>
+</CardGroup>
+
+## Common use cases
+
+### API documentation
+
+Research and document:
+- Authentication methods and security standards
+- Rate limiting approaches and industry norms
+- Error handling patterns and HTTP status codes
+- Versioning strategies and deprecation policies
+
+### Technical guides
+
+Enhance guides with:
+- Step-by-step procedures from authoritative sources
+- Troubleshooting information from known issues
+- Configuration best practices and recommendations
+- Performance tuning based on research
+
+### Architecture documentation
+
+Support architectural decisions with:
+- Design pattern research and trade-offs
+- Scalability considerations and case studies
+- Technology comparison and evaluation criteria
+- Industry standards and compliance requirements
+
+## Integration tips
+
+<Warning>
+Always verify information from multiple sources before including it in production documentation. DeepSearch provides research assistance, but you should validate technical accuracy.
+</Warning>
+
+<Tip>
+Keep a research log of sources consulted for each major documentation update. This helps with future updates and provides transparency.
+</Tip>
+
+## Additional resources
+
+<Card title="Paperguide documentation" icon="book" href="https://paperguide.ai">
+  Learn more about DeepSearch features and capabilities.
+</Card>
