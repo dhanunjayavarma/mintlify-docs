@@ -1,0 +1,289 @@
+---
+title: "Paperguide Writer setup"
+description: "Configure Paperguide Writer for AI-assisted documentation creation"
+icon: "pen-to-square"
+---
+
+Use Paperguide Writer to create high-quality documentation with AI assistance. This guide shows how to leverage Writer for drafting, editing, and improving technical content.
+
+## Prerequisites
+
+- Paperguide account with Writer access
+- Documentation project or repository
+- Clear understanding of your documentation goals
+
+## Getting started with Writer
+
+Paperguide Writer helps you create documentation faster while maintaining quality and consistency.
+
+### Writing workflow
+
+<Steps>
+<Step title="Define your documentation scope">
+  Before using Writer, clarify:
+  - Target audience and technical level
+  - Documentation type (guide, reference, tutorial)
+  - Key topics and concepts to cover
+  - Tone and style requirements
+</Step>
+
+<Step title="Create initial draft">
+  Use Writer to generate documentation drafts:
+  
+  ```
+  Prompt: "Write a getting started guide for a REST API 
+  that uses OAuth 2.0 authentication. Include prerequisites, 
+  authentication flow, and a basic example request."
+  ```
+  
+  <Tip>
+  Provide specific context about your product, audience, and desired structure for better results.
+  </Tip>
+</Step>
+
+<Step title="Review and refine">
+  Edit the generated content to:
+  - Verify technical accuracy
+  - Add product-specific details
+  - Include actual code examples
+  - Match your documentation style
+  
+  <Check>
+  Always test code examples and verify technical claims before publishing.
+  </Check>
+</Step>
+
+<Step title="Iterate and improve">
+  Use Writer to:
+  - Expand sections that need more detail
+  - Simplify complex explanations
+  - Add examples and use cases
+  - Improve clarity and readability
+</Step>
+</Steps>
+
+## Effective prompting
+
+### Documentation types
+
+<Tabs>
+<Tab title="API reference">
+  ```
+  "Document the GET /users endpoint that returns a paginated 
+  list of users. Include parameters: page (integer), limit 
+  (integer, max 100), and sort (string). Response is JSON 
+  with user objects containing id, name, email, and created_at."
+  ```
+</Tab>
+
+<Tab title="Tutorial">
+  ```
+  "Write a step-by-step tutorial for integrating our webhook 
+  system. Cover: creating a webhook endpoint, registering it 
+  in our dashboard, handling webhook signatures for security, 
+  and processing event payloads. Include code examples in Python."
+  ```
+</Tab>
+
+<Tab title="Conceptual guide">
+  ```
+  "Explain how our rate limiting system works. Cover: rate 
+  limit tiers, how limits are calculated, what happens when 
+  limits are exceeded, and best practices for handling rate 
+  limit errors. Target audience: developers integrating our API."
+  ```
+</Tab>
+
+<Tab title="Troubleshooting">
+  ```
+  "Create a troubleshooting guide for common authentication 
+  errors. Include: 401 Unauthorized (invalid token), 403 
+  Forbidden (insufficient permissions), and token expiration. 
+  For each error, explain the cause and provide solutions."
+  ```
+</Tab>
+</Tabs>
+
+### Prompt best practices
+
+<AccordionGroup>
+<Accordion title="Be specific and detailed">
+  **Good**: "Write installation instructions for our CLI tool on macOS, Linux, and Windows. Include prerequisites (Node.js 18+), installation via npm, and verification steps."
+  
+  **Avoid**: "Write installation docs for our CLI."
+</Accordion>
+
+<Accordion title="Specify audience and tone">
+  **Good**: "Explain database migrations for junior developers. Use simple language, avoid jargon, and include a practical example."
+  
+  **Avoid**: "Explain database migrations."
+</Accordion>
+
+<Accordion title="Include structure requirements">
+  **Good**: "Create a quickstart guide with these sections: Prerequisites, Installation, Configuration, First API call, Next steps. Keep it under 500 words."
+  
+  **Avoid**: "Create a quickstart guide."
+</Accordion>
+
+<Accordion title="Provide context and constraints">
+  **Good**: "Document our webhook retry logic: 3 retries with exponential backoff (1s, 5s, 25s). Explain when webhooks are marked as failed and how to re-enable them."
+  
+  **Avoid**: "Document webhook retries."
+</Accordion>
+</AccordionGroup>
+
+## Content refinement
+
+### Improving generated content
+
+Use Writer iteratively to enhance documentation:
+
+<CardGroup cols={2}>
+<Card title="Simplify language" icon="text">
+  "Rewrite this section using simpler language for developers new to GraphQL."
+</Card>
+
+<Card title="Add examples" icon="code">
+  "Add a practical code example showing how to handle pagination in this API."
+</Card>
+
+<Card title="Expand details" icon="magnifying-glass-plus">
+  "Expand the error handling section with more details about each error type."
+</Card>
+
+<Card title="Improve structure" icon="list">
+  "Reorganize this content into a step-by-step tutorial format."
+</Card>
+</CardGroup>
+
+### Quality checks
+
+<Warning>
+Writer generates drafts that require human review. Always verify:
+- Technical accuracy of all statements
+- Code examples compile and run correctly
+- Links and references are valid
+- Content matches your product's actual behavior
+</Warning>
+
+<Checklist>
+- [ ] Technical details are accurate
+- [ ] Code examples are tested
+- [ ] Terminology is consistent
+- [ ] Tone matches documentation style
+- [ ] All prerequisites are listed
+- [ ] Next steps are provided
+</Checklist>
+
+## Common use cases
+
+### Creating new documentation
+
+**Initial draft generation**
+```
+"Create comprehensive API documentation for our user 
+management endpoints. Include: list users (GET /users), 
+get user (GET /users/:id), create user (POST /users), 
+update user (PUT /users/:id), delete user (DELETE /users/:id). 
+For each endpoint, document parameters, request body, 
+response format, and error codes."
+```
+
+### Updating existing content
+
+**Modernizing documentation**
+```
+"Update this authentication guide to reflect our new OAuth 2.0 
+implementation. Replace the old API key section with OAuth flow, 
+including authorization, token exchange, and refresh tokens."
+```
+
+### Filling documentation gaps
+
+**Adding missing sections**
+```
+"This API reference is missing error documentation. Add a 
+comprehensive error reference covering: error response format, 
+common HTTP status codes we use, error code meanings, and 
+how to handle each error type."
+```
+
+### Improving clarity
+
+**Simplifying complex topics**
+```
+"This explanation of our caching system is too technical. 
+Rewrite it for developers who aren't caching experts. Focus 
+on practical usage: when to use caching, how to set cache 
+headers, and cache invalidation basics."
+```
+
+## Integration with documentation workflow
+
+### Draft and review process
+
+<Steps>
+<Step title="Generate draft">
+  Use Writer to create initial content based on specifications or requirements.
+</Step>
+
+<Step title="Technical review">
+  Have subject matter experts verify accuracy and completeness.
+</Step>
+
+<Step title="Edit and refine">
+  Polish the content, add product-specific details, and ensure consistency.
+</Step>
+
+<Step title="Test examples">
+  Run all code examples and verify they work as documented.
+</Step>
+
+<Step title="Publish and iterate">
+  Publish the documentation and gather feedback for future improvements.
+</Step>
+</Steps>
+
+### Maintaining consistency
+
+<Tip>
+Create a style guide prompt that you reuse across documentation:
+
+"Write in second person, use sentence case for headings, prefer active voice, keep paragraphs under 4 lines, use code blocks with language tags, and follow our terminology: 'endpoint' not 'route', 'parameter' not 'param'."
+</Tip>
+
+## Best practices
+
+<AccordionGroup>
+<Accordion title="Start with outlines">
+  Generate an outline first, review it, then ask Writer to expand each section. This ensures proper structure before investing time in detailed content.
+</Accordion>
+
+<Accordion title="Iterate in small chunks">
+  Work on one section at a time rather than generating entire documents. This makes review and refinement more manageable.
+</Accordion>
+
+<Accordion title="Provide examples to match">
+  Include examples of your existing documentation style in prompts so Writer can match your tone and format.
+</Accordion>
+
+<Accordion title="Combine with DeepSearch">
+  Use DeepSearch to research technical topics, then use Writer to create documentation based on those findings.
+</Accordion>
+</AccordionGroup>
+
+## Limitations and considerations
+
+<Note>
+Writer is a drafting tool, not a replacement for technical expertise. Generated content requires:
+- Technical validation by subject matter experts
+- Testing of all code examples
+- Verification against actual product behavior
+- Editing for style and consistency
+</Note>
+
+## Additional resources
+
+<Card title="Paperguide documentation" icon="book" href="https://paperguide.ai">
+  Learn more about Writer features and capabilities.
+</Card>
