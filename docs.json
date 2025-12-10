@@ -42,7 +42,9 @@
             "pages": [
               "ai-tools/cursor",
               "ai-tools/claude-code",
-              "ai-tools/windsurf"
+              "ai-tools/windsurf",
+              "ai-tools/paperguide-deepsearch",
+              "ai-tools/paperguide-writer"
             ]
           }
         ]
